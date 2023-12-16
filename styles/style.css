@@ -3,7 +3,9 @@
     --fs: 16px;
 
     /* Background colors */
-    --bg-color: rgb(248, 243, 243);
+    --main-bg-color: rgb(248, 243, 243);
+    --banner-bg-color: rgb(255, 197, 122);
+    --boxshadow: rgb(87, 87, 87);
 
     /* Font styles */
     --ff: 'Roboto', sans-serif;
@@ -13,6 +15,10 @@
 
 *{
     box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .f{
@@ -26,7 +32,7 @@
 body{
     font-size: var(--fs);
     font-family: var(--ff);
-    background-color: var(--bg-color);
+    background-color: var(--main-bg-color);
     
 }
 
@@ -40,15 +46,33 @@ header{
     transition: top 0.3s;
     width: 100%;
     max-width: 1440px;
-    padding: 1.5rem;
+    padding: 1rem;
     position: fixed;
     z-index: 1000;
-    border: 1px solid green;
-    background-color: var(--bg-color);
+    box-shadow: 1px 1px 5px var(--boxshadow);
+    background-color: var(--main-bg-color);
 }
 
 header.closed{
     top: -50px;
+    padding: 2rem;
+}
+
+nav{
+    justify-content: center;
+}
+
+.logo img{
+    width: 25px;
+    height: 25px;
+}
+
+.logo img.minimize{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    bottom: -25px;
+    right: 10px;
 }
 
 .nav{
@@ -61,15 +85,15 @@ header.closed{
     justify-content: space-between;
     overflow: hidden;
     border-radius: .3rem;
-    box-shadow: 1px 1px 5px rgb(87, 87, 87);
-    background-color: rgb(255, 197, 122);
+    box-shadow: 1px 1px 5px var(--boxshadow);
+    background-color: var(--banner-bg-color);
 }
 
 .shades{
     gap: 2rem;
 }
 
-.shaded{
+#shaded1, #shaded2{
     position: relative;
     bottom: -20px;
     left: -50px;
@@ -77,10 +101,8 @@ header.closed{
     transform: rotate(-45deg);
     border: 1px solid black;
     background-color: black;
-    opacity: 0;
     width: 250px;
     height: 20px;
-    animation: shadeAnimation 3s forwards;
 }
 
 @keyframes shadeAnimation {
@@ -92,14 +114,8 @@ header.closed{
     }
 }
 
-.mess1{
-    
-}
-
-.beats{
+#beats1, #beats2{
     align-self: center;
-    opacity: 0;
-    animation: fadeAnimation 3s forwards;
 }
 
 @keyframes fadeAnimation {
@@ -113,27 +129,24 @@ header.closed{
     }
 }
 
-.img_beats{
+#img_beats{
     position: relative;
     top: -105px;
     left: -6px;
-    opacity: 0;
-    animation: imgFadeAnimation 5s forwards;
+    /* animation: imgFadeAnimation 5s forwards; */
 }
 
 @keyframes imgFadeAnimation {
     from{
         opacity: 0;
-        /* transform: translateX(100px); */
     }
     to{
         opacity: 1;
-        /* transform: translateX(0); */
     }
 }
 
 
-.img_beats img{
+#img_beats img{
     min-height: 200px;
     max-height: 300px;
 }
@@ -144,9 +157,9 @@ header.closed{
 }
 
 .shop_now{
-    height: 200px;
-    border: 1px solid violet;
-    margin: 2rem;
+    height: 350px;
+    border-radius: .2rem;
+    margin: 3.5rem 2rem;
     transition: 0.4s;
     background: linear-gradient(to top, rgb(46, 45, 45), rgb(233, 233, 233));
     justify-content: center;
@@ -167,23 +180,36 @@ header.closed{
 }
 
 .join{
-    padding: 2rem;
+    padding: 2rem 2rem 3.5rem 2rem;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+.join input{
+    height: 40px;
+    width: 250px;
+    text-align: center;
+    border-radius: .3rem;
+    border: 2px solid black;
 }
 
 .email-error{
     border: 1px solid red;
 }
 
+.email-error:target{
+    border: 1px solid red;
+}
+
 
 /* Footer */
 footer{
-    border: 1px solid black;
+    border-top: 1px solid black;
     background-color: rgb(253, 248, 248);
-    gap: 2rem;
-    padding: 2rem 0;
+    gap: 2.5rem;
+    padding: 3.5rem 0 2rem 0;
+    color: rgb(66, 66, 66);
 }
 
 .dfooter{
@@ -191,16 +217,7 @@ footer{
     justify-content: space-around;
 }
 
-.products, .company, .copyright{
-    gap: 1rem;
-}
-
-
-.company{
-    gap: 1rem;
-}
-
-.legal{
+.products, .company, .legal, .copyright{
     gap: 1rem;
 }
 
@@ -209,6 +226,10 @@ footer{
 }
 
 /* typography */
+h3{
+    font-size: 1.5rem;
+}
+
 p{
     font-weight: var(--fw-bold);
     font-size: 2rem;
@@ -220,7 +241,7 @@ p{
 #error_mess{
     position: relative;
     top: -10px;
-    font-size: .6rem;
+    font-size: .8rem;
     color: red;
 }
 
@@ -232,6 +253,11 @@ a{
 
 li{
     list-style-type: none;
+    cursor: pointer;
+}
+
+li:hover{
+    color: black;
 }
 
 .copyright p{
