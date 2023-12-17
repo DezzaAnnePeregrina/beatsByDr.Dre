@@ -160,7 +160,16 @@ nav{
     margin-top: 4.8rem;
     padding: 0 2rem;
     justify-content: space-around;
-    align-items: center;
+}
+
+.carousel-item{
+    margin-left: 2rem;
+    height: 400px;
+    width: 300px;
+}
+
+.carousel-item:hover{
+    box-shadow: 1px 1px 5px var(--boxshadow);
 }
 
 .shop_now{
@@ -187,18 +196,17 @@ nav{
 }
 
 .join{
-    padding: 2rem 2rem 3.5rem 2rem;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
+    padding-bottom: 2rem;
 }
 
 .join input{
     height: 40px;
     width: 250px;
     text-align: center;
+    align-self: center;
+    background-color: rgb(255, 255, 255);
     border-radius: .3rem;
-    border: 2px solid black;
 }
 
 .email-error{
@@ -207,6 +215,10 @@ nav{
 
 .email-error:target{
     border: 1px solid red;
+}
+
+.email-valid{
+    border: 1px solid green;
 }
 
 

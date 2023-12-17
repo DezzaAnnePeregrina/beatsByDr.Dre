@@ -61,3 +61,19 @@ observer.observe(animatedShaded2)
 observer.observe(animatedBeats1)
 observer.observe(animatedBeats2)
 observer.observe(animatedImgBeats)
+
+//hero
+validateEmail = () =>{
+    const emailInput = document.getElementById('email')
+    const err = document.getElementById('error_mess')
+    if(emailInput.value.includes('@')){
+        emailInput.classList.add('email-valid')
+        emailInput.classList.remove('email-error')
+        err.textContent = ''
+    } else{
+        emailInput.classList.add('email-error')
+        emailInput.classList.remove('email-valid')
+        err.textContent = 'Invalid Email'
+    }
+}
+
