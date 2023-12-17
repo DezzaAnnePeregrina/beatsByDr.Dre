@@ -26,7 +26,6 @@ const animatedImgBeats = document.getElementById('img_beats')
 
 const observer = new IntersectionObserver( e =>{
     e.forEach(e =>{
-        // const sA = style.animation
 
         if(e.isIntersecting){
 
@@ -62,19 +61,3 @@ observer.observe(animatedShaded2)
 observer.observe(animatedBeats1)
 observer.observe(animatedBeats2)
 observer.observe(animatedImgBeats)
-
-//joining list
-const inputElement = document.getElementById('email')
-const errorMess =  document.getElementById('error_mess')
-
-inputElement.addEventListener('keyup', (e) =>{
-    if(e.key === 'Enter' && !e.target.value.includes('@')){
-        inputElement.classList.add('email-error')
-        inputElement.style.borderColor = 'red' 
-        errorMess.textContent = "Invalid email"
-    } else{
-        inputElement.classList.remove('email-error')
-        errorMess.textContent = ''
-        inputElement.style.borderColor = 'green' 
-    }
-})
