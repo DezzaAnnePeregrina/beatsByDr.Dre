@@ -46,17 +46,26 @@ header{
     transition: top 0.3s;
     width: 100%;
     max-width: 1440px;
+    padding: 1rem 3rem;
     position: fixed;
-    z-index: 90;
+    z-index: 100;
     box-shadow: 1px 1px 5px var(--boxshadow);
     background-color: var(--main-bg-color);
+    justify-content: space-between;
 }
 
 header.closed{
-    top: -50px;
+    top: -60px;
+    padding: 2rem 3rem;
+}
+
+.nav{
+    gap: 1rem;
 }
 
 .logo img{
+    position: relative;
+    left: -125px;
     width: 25px;
     height: 25px;
 }
@@ -65,12 +74,8 @@ header.closed{
     position: relative;
     width: 20px;
     height: 20px;
-    bottom: -25px;
-    right: 10px;
-}
-
-.nav{
-    gap: 1rem;
+    margin-top: 1rem;
+    bottom: -20px;
 }
 
 .banner{
