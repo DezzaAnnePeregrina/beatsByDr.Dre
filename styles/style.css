@@ -46,20 +46,14 @@ header{
     transition: top 0.3s;
     width: 100%;
     max-width: 1440px;
-    padding: 1rem;
     position: fixed;
-    z-index: 1000;
+    z-index: 90;
     box-shadow: 1px 1px 5px var(--boxshadow);
     background-color: var(--main-bg-color);
 }
 
 header.closed{
     top: -50px;
-    padding: 2rem;
-}
-
-nav{
-    justify-content: center;
 }
 
 .logo img{
