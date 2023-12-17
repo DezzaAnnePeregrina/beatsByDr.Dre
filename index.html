@@ -50,48 +50,84 @@
 
             <div class="products-section f flex-col justify-center space-y-4">
                 <h3 class="text-4xl font-bold font-sans self-center">Gifts for Music Lovers</h3>
+                <div class="carousel-container max-w-4xl p-4 space-x-7 rounded-box">
+                    <div class="carousel" id="musicCarousel">
+                        <div class="carousel-item flex-col space-y-8 justify-center items-center">
+                            <h3 class="text-2xl font-semibold font-sans">Beats Studio Buds +</h3>
+                            <img class="h-60 w-60" src="images/Beats Studio Buds +.png" alt="Beats Studio Pro +">
+                        </div> 
+    
+                        <div class="carousel-item flex-col space-y-8 justify-center items-center">
+                            <h3 class="text-2xl font-semibold font-sans">Beats Solo 3 Wireless</h3>
+                            <img class="h-60 w-60" src="images/Beats Solo3 Wireless.png" alt="Beats Studio Pro +">
+                        </div> 
+    
+                        <div class="carousel-item flex-col space-y-8 justify-center items-center">
+                            <h3 class="text-2xl font-semibold font-sans">Beats Studio Pro</h3>
+                            <img class="h-60 w-60" src="images/Beats Studio Pro.png" alt="Beats Studio Pro +">
+                        </div> 
+    
+                        <div class="carousel-item flex-col space-y-8 justify-center items-center">
+                            <h3 class="text-2xl font-semibold font-sans">Powerbeats Pro</h3>
+                            <img class="h-60 w-60" src="images/Powerbeats Pro.png" alt="Beats Studio Pro +">
+                        </div> 
+    
+                        <div class="carousel-item flex-col space-y-8 justify-center items-center">
+                            <h3 class="text-2xl font-semibold font-sans">Beats Flex</h3>
+                            <img class="h-60 w-60" src="images/Beats flex.png" alt="Beats Studio Pro +">
+                        </div>
+                        <!-- Add more carousel items as needed -->
+                    </div>
+                    <button class="arrow" id="prev">&lt;</button>
+                    <button class="arrow" id="next">&gt;</button>
+                </div>
+            </div>
+
+            <!-- <div class="products-section f flex-col justify-center space-y-4">
+                <h3 class="text-4xl font-bold font-sans self-center">Gifts for Music Lovers</h3>
                 <div class="carousel carousel-center max-w-4xl p-4 space-x-7 rounded-box">
                     <div class="carousel-item flex-col space-y-8 justify-center items-center rounded-sm">
                         <h3 class="text-2xl font-semibold font-sans">Beats Studio Buds +</h3>
-                        <img class="h-60 w-60" src="images/Beats Studio Buds +.jpg" alt="Beats Studio Pro +">
+                        <img class="h-60 w-60" src="images/Beats Studio Buds +.png" alt="Beats Studio Pro +">
                     </div> 
 
                     <div class="carousel-item flex-col space-y-8 justify-center items-center">
                         <h3 class="text-2xl font-semibold font-sans">Beats Solo 3 Wireless</h3>
-                        <img class="h-60 w-60" src="images/Beats Solo3 Wireless.jpg" alt="Beats Studio Pro +">
+                        <img class="h-60 w-60" src="images/Beats Solo3 Wireless.png" alt="Beats Studio Pro +">
                     </div> 
 
                     <div class="carousel-item flex-col space-y-8 justify-center items-center">
                         <h3 class="text-2xl font-semibold font-sans">Beats Studio Pro</h3>
-                        <img class="h-60 w-60" src="images/Beats Studio Pro.jpg" alt="Beats Studio Pro +">
+                        <img class="h-60 w-60" src="images/Beats Studio Pro.png" alt="Beats Studio Pro +">
                     </div> 
 
                     <div class="carousel-item flex-col space-y-8 justify-center items-center">
                         <h3 class="text-2xl font-semibold font-sans">Powerbeats Pro</h3>
-                        <img class="h-60 w-60" src="images/Powerbeats Pro.jpg" alt="Beats Studio Pro +">
+                        <img class="h-60 w-60" src="images/Powerbeats Pro.png" alt="Beats Studio Pro +">
                     </div> 
 
                     <div class="carousel-item flex-col space-y-8 justify-center items-center">
                         <h3 class="text-2xl font-semibold font-sans">Beats Flex</h3>
-                        <img class="h-60 w-60" src="images/Beats flex.jpg" alt="Beats Studio Pro +">
+                        <img class="h-60 w-60" src="images/Beats flex.png" alt="Beats Studio Pro +">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
-        <div id="shop_now" class="f fd-col shop_now">
-            <div>
-                <img src="" alt="">
+        <div id="shop_now"></div>
+        <div class="f shop_now">
+            <div class="join_beats">
+                <img src="images/beatsbydre.png" alt="Join Beats by Dr. Dre">
             </div>
 
-            <div>
-                <h1>Join Beats Army</h1>
-                <div class="go_shop">Shop now</div>
+            <div class="flex-col space-y-5">
+                <h1 class="text-4xl font-bold font-sans">Join Beats Army</h1>
+                <div class="text-1xl font-sans go_shop">Shop now</div>
             </div>
             
         </div>
 
-        <div class="join f fd-col">
+        <div class="register f fd-col">
             <h3 class="text-4xl font-bold font-sans self-center">Join our list</h3>
             <p class="text-3xl font-semibold font-sans self-center">Don't miss a beat. Stay up to date on the latest products, collabs and more.</p>
             <input id="email" oninput="validateEmail()" type="text" placeholder="Enter your email address">

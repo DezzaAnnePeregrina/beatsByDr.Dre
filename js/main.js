@@ -62,6 +62,45 @@ observer.observe(animatedBeats1)
 observer.observe(animatedBeats2)
 observer.observe(animatedImgBeats)
 
+
+//carousel
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("musicCarousel");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+
+    let currentIndex = 0;
+
+    updateButtonState();
+
+    nextBtn.addEventListener("mouseover", function () {
+        if (currentIndex < carousel.children.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevBtn.addEventListener("mouseover", function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    function updateCarousel() {
+        const translateValue = -currentIndex * 13 + "%";
+        carousel.style.transform = "translateX(" + translateValue + ")";
+        updateButtonState();
+    }
+
+    function updateButtonState() {
+        nextBtn.disabled = currentIndex === carousel.children.length - 1;
+        prevBtn.disabled = currentIndex === 0;
+    }
+});
+
+
+
 //hero
 validateEmail = () =>{
     const emailInput = document.getElementById('email')
@@ -70,7 +109,12 @@ validateEmail = () =>{
         emailInput.classList.add('email-valid')
         emailInput.classList.remove('email-error')
         err.textContent = ''
-    } else{
+    } else if(emailInput.value === ''){
+        emailInput.classList.remove('email-valid')
+        emailInput.classList.remove('email-error')
+        err.textContent = ''
+    }
+    else{
         emailInput.classList.add('email-error')
         emailInput.classList.remove('email-valid')
         err.textContent = 'Invalid Email'

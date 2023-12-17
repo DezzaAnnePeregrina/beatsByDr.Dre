@@ -157,49 +157,119 @@ header.closed{
 
 .content{
     margin-top: 4.8rem;
+    margin-bottom: 3rem;
     padding: 0 2rem;
     justify-content: space-around;
 }
 
-.carousel-item{
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 2rem 1rem;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
     margin-left: 2rem;
     height: 400px;
     width: 300px;
+    border-radius: 3rem;
+    cursor: pointer;
 }
 
 .carousel-item:hover{
     box-shadow: 1px 1px 5px var(--boxshadow);
+    animation: goHighlight .5s normal;
+    position: relative;
 }
+
+@keyframes goHighlight{
+    from{
+        top: 0px;
+    } to{  
+        top: -3px;
+    }
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333333a8;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
 
 .shop_now{
     height: 350px;
-    border-radius: .2rem;
-    margin: 3.5rem 2rem;
-    transition: 0.4s;
+    margin: 2rem 0;
     background: linear-gradient(to top, rgb(46, 45, 45), rgb(233, 233, 233));
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.join_beats img{
+    width: 400px;
+    height: 350px;
+    animation: floatingAnimation 2s ease-in-out infinite ;
+}
+
+.join_beats{
+    position: relative;
+    top: 55%;
+    bottom: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes floatingAnimation{
+    0%, 100%{
+        transform: translateY(0);
+    } 50%{
+        transform: translateY(-20px);
+    }
 }
 
 .go_shop{
-    padding: .8rem;
-    border: 1px solid red;
     width: max-content;
     border-radius: 1.5rem;
     cursor: pointer;
+    padding: .5rem;
+    background-color: black;
+    color: white;
 } 
 
 .go_shop:hover{
-    background-color: rebeccapurple;
-    transition: 0.5s;
+    background-color: white;
+    color: black;
 }
 
-.join{
+.register{
     gap: 1rem;
     padding-bottom: 2rem;
 }
 
-.join input{
+.register input{
     height: 40px;
     width: 250px;
     text-align: center;
